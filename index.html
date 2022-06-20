@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Music-Player</title>
+    <link rel="icon" href="./asset/imgs/page-logo.png" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./asset/fonts/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="stylesheet" href="./asset/css/base.css">
+    <link rel="stylesheet" href="./asset/css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="grid__row">
+            <div class="grid-column-2">
+                <div class="container-menu">
+                    <div class="menu-header">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="menu-list">
+                        <li class="menu-list-item">
+                            <i class="fa-solid fa-house"></i>
+                            <a href="#" class="menu-list-item-link">Home</a>
+                        </li>
+                        <li class="menu-list-item">
+                            <i class="fa-solid fa-list"></i>
+                            <a href="#" class="menu-list-item-link">Browse</a>
+                        </li>
+                        <li class="menu-list-item">
+                            <i class="fa-solid fa-file"></i>
+                            <a href="#" class="menu-list-item-link">Album</a>
+                        </li>
+                        <li class="menu-list-item">
+                            <i class="fa-solid fa-user"></i>
+                            <a href="#" class="menu-list-item-link">Artists</a>
+                        </li>
+                        <li class="menu-list-item">
+                            <i class="fa-solid fa-video"></i>
+                            <a href="#" class="menu-list-item-link">Videos</a>
+                        </li>
+                    </ul>
+                    <div class="menu-title">My Music</div>
+                    <ul class="menu-list">
+                        <li class="menu-list-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <a href="#" class="menu-list-item-link">Recently Played</a>
+                        </li>
+                        <li class="menu-list-item">
+                            <i class="fa-solid fa-file"></i>
+                            <a href="#" class="menu-list-item-link">Local Files</a>
+                        </li>
+                    </ul>
+                    <div class="menu-title">PlayList</div>
+                    <ul class="menu-list">
+                        <li class="menu-list-item">
+                            <!-- <i class="fa-solid fa-music"></i> -->
+                            <a href="#" class="menu-list-item-link">General Playlist</a>
+                        </li>
+                        <li class="menu-list-item">
+                            <!-- <i class="fa-solid fa-file"></i> -->
+                            <a href="#" class="menu-list-item-link">Ease Up Beats</a>
+                        </li>
+                        <li class="menu-list-item">
+                            <!-- <i class="fa-solid fa-headphones-simple"></i> -->
+                            <a href="#" class="menu-list-item-link">Pop Songs</a>
+                        </li>
+                        <li class="menu-list-item">
+                            <!-- <i class="fa-solid fa-file"></i> -->
+                            <a href="#" class="menu-list-item-link">Mood Swings</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid-column-10">
+                <div class="product-header">
+                    <div class="header-navbar">
+                        <div class="navbar-logo">
+                            <span>S</span>
+                            <span>I</span>
+                            <span>N</span>
+                            <span>G</span>
+                            <span>A</span>
+                            <span>S</span>
+                            <span>O</span>
+                            <span>N</span>
+                            <span>G</span>
+                        </div>
+                        <div class="navbar-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Search">
+                        </div>
+                    </div>
+                    <div class="header-info">
+                        <div class="header-info-user">
+                            <div class="user-avatar" style="background-image: url('./asset/imgs/Songer-Quang\ Đạt.jpg')"></div>
+                            <div class="user-name">Quang Đạt</div>
+                            <div class="user-select">
+                                <i class="fa-solid fa-angle-down"></i>
+                                <ul class="select-list">
+                                    <li class="select-list-item">
+                                        <a href="#" class="select-list-item-link">Nâng cấp VIP</a>
+                                    </li>
+                                    <li class="select-list-item">
+                                        <a href="#" class="select-list-item-link">Mua code VIP</a>
+                                    </li>
+                                    <span class="select-list-item-separate"></span>
+                                    <li class="select-list-item">
+                                        <i class="fa-solid fa-arrow-right-from-bracket"></i><span>Đăng Xuất</span>  
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header-info-separate"></div>
+                        <div class="header-info-active">
+                            <div class="active-notify">
+                                <i class="fa-regular fa-bell"></i>
+                                <div class="active-notify-new"></div>
+                                <div class="active-notify-list">
+                                    <img src="./asset/imgs/listen-music.gif" alt="">
+                                    <span>Chưa Có Thông Báo Mới</span>
+                                </div>
+                            </div>
+                            <div class="active-setting">
+                                <i class="fa-solid fa-gear"></i>
+                                <ul class="active-setting-list">
+                                    <li class="active-setting-list-item">
+                                        <a href="#" class="active-setting-list-item-link">
+                                            <i class="fa-solid fa-ban"></i>
+                                            <span>Danh sách chặn</span>
+                                        </a>
+                                    </li>
+                                    <li class="active-setting-list-item">
+                                        <a href="#" class="active-setting-list-item-link">
+                                            <i class="fa-regular fa-gem"></i>
+                                            <span>Chất lượng nhạc</span>
+                                            <i class="arow-right-icon fa-solid fa-angle-right"></i>
+                                        </a>
+                                    </li>
+                                    <li class="active-setting-list-item">
+                                        <a href="#" class="active-setting-list-item-link">
+                                            <i class="fa-regular fa-circle-play"></i>
+                                            <span>Giao diện</span>
+                                            <i class="arow-right-icon fa-solid fa-angle-right"></i>
+                                        </a>
+                                    </li>
+                                    <div class="active-setting-list-item-separate"></div>
+                                    <li class="active-setting-list-item">
+                                        <a href="#" class="active-setting-list-item-link">
+                                            <i class="fa-solid fa-info"></i>
+                                            <span>Giới thiệu</span>
+                                        </a>
+                                    </li>
+                                    <li class="active-setting-list-item">
+                                        <a href="#" class="active-setting-list-item-link">
+                                            <i class="fa-solid fa-flag"></i>
+                                            <span>Góp ý</span>
+                                        </a>
+                                    </li>
+                                    <li class="active-setting-list-item">
+                                        <a href="#" class="active-setting-list-item-link">
+                                            <i class="fa-solid fa-phone"></i>
+                                            <span>Liên hệ</span>
+                                        </a>
+                                    </li>
+                                    <li class="active-setting-list-item">
+                                        <a href="#" class="active-setting-list-item-link">
+                                            <i class="fa-brands fa-buysellads"></i>
+                                            <span>Quảng cáo</span>
+                                        </a>
+                                    </li>
+                                    <li class="active-setting-list-item">
+                                        <a href="#" class="active-setting-list-item-link">
+                                            <i class="fa-solid fa-file"></i>
+                                            <span>Thỏa thuận sử dụng</span>
+                                        </a>
+                                    </li>
+                                    <li class="active-setting-list-item">
+                                        <a href="#" class="active-setting-list-item-link">
+                                            <i class="fa-solid fa-shield"></i>
+                                            <span>Chính sách bảo mật</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-product">
+                    <div class="product-artists">
+                        <div class="product-artists-title">
+                            <h3>Top Artists</h3>
+                            <span class="separate">-</span>
+                            <span>Top 50</span>
+                        </div>
+                        <div class="product-artists-slider">
+                            <ul class="slider-dot">
+                                <li class="slider-dot-item slider-dot-item-active" data-index="0"></li>
+                                <li class="slider-dot-item" data-index="1"></li>
+                                <li class="slider-dot-item" data-index="2"></li>
+                                <li class="slider-dot-item" data-index="3"></li>
+                                <li class="slider-dot-item" data-index="4"></li>
+                                <li class="slider-dot-item" data-index="5"></li>
+                            </ul>
+                            <div class="product-artists-slider-main">
+                                <div class="product-artists-slider-main-item">
+                                    <div class="item-avatar" style="background-image: url('./asset/imgs/songer-Lisa-lalisa.jpg')"></div>
+                                    <div class="item-name">Lisa (BlackPink)</div>
+                                </div>
+                                <div class="product-artists-slider-main-item">
+                                    <div class="item-avatar" style="background-image: url('./asset/imgs/songer-Rose-on\ the\ ground.jpg')"></div>
+                                    <div class="item-name">Rosé (BlackPink)</div>
+                                </div>
+                                <div class="product-artists-slider-main-item">
+                                    <div class="item-avatar" style="background-image: url('./asset/imgs/singer-taylorswift.jpg')"></div>
+                                    <div class="item-name">Taylorswift</div>
+                                </div>
+                                <div class="product-artists-slider-main-item">
+                                    <div class="item-avatar" style="background-image: url('./asset/imgs/singer-Đen\ Vâu.jpg')"></div>
+                                    <div class="item-name">Đen Vâu</div>
+                                </div>
+                                <div class="product-artists-slider-main-item">
+                                    <div class="item-avatar" style="background-image: url('./asset/imgs/singer-sơn\ tùng\ mtp.webp')"></div>
+                                    <div class="item-name">Sơn Tùng MTP</div>
+                                </div>
+                                <div class="product-artists-slider-main-item">
+                                    <div class="item-avatar" style="background-image: url('./asset/imgs/singer-pha\ mạnh\ quỳnh.jpg')"></div>
+                                    <div class="item-name">Phan Mạnh Quỳnh</div>
+                                </div>
+                                <div class="product-artists-slider-main-item">
+                                    <div class="item-avatar" style="background-image: url('./asset/imgs/singer-vũ.jpg')"></div>
+                                    <div class="item-name">Vũ</div>
+                                </div>
+                                <div class="product-artists-slider-main-item">
+                                    <div class="item-avatar" style="background-image: url('./asset/imgs/singer-blackpink-the\ best.jpg')"></div>
+                                    <div class="item-name">BlackPink</div>
+                                </div>
+                                <div class="product-artists-slider-main-item">
+                                    <div class="item-avatar" style="background-image: url('./asset/imgs/singer-bts.jfif')"></div>
+                                    <div class="item-name">BTS</div>
+                                </div>
+                                <div class="product-artists-slider-main-item">
+                                    <div class="item-avatar" style="background-image: url('./asset/imgs/singer-bigbang.jfif')"></div>
+                                    <div class="item-name">BigBang</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player">
+                        <div class="grid__row">
+                            <div class="grid-column-4">
+                                <div class="dashboard-title">Now Playing</div>
+                                <div class="dashboard">
+                                    <div class="cd">
+                                        <div class="cd-thumb" style="background-image: url('')"></div>
+                                    </div>
+                                    <div class="audio-info">
+                                        <div class="audio-info-name"></div>
+                                        <div class="audio-info-author"></div>
+                                    </div>
+                                    <input type="range" id="progress" class="progress" value="0" step="1" min="0" max="100">
+                                    <div class="audio-time">
+                                        <div class="time-current"></div>
+                                        <div class="time-duration"></div>
+                                    </div>
+                                    <div class="control">
+                                        <div class="btn btn-repeat">
+                                            <i class="fa-solid fa-rotate-right"></i>
+                                            <div class="repeat-title">Phát lại bài hát</div>
+                                        </div>
+                                        <div class="btn btn-prev">
+                                            <i class="fa-solid fa-backward-step"></i>
+                                        </div>
+                                        <div class="btn-play-pause">
+                                            <div class="btn-toggle-play">
+                                                <i class="icon-play fa-solid fa-play"></i>
+                                                <i class="icon-pause fa-solid fa-pause"></i>
+                                            </div>
+                                        </div>
+                                        <div class="btn btn-next">
+                                            <i class="fa-solid fa-forward-step"></i>
+                                        </div>
+                                        <div class="btn btn-random">
+                                            <i class="fa-solid fa-shuffle"></i>
+                                            <div class="random-title">Phát ngẫu nhiên</div>
+                                        </div>
+                                    </div>
+                                    <audio src="./asset/audios/Lalisa-LISA.mp3" class="audio"></audio>
+                                </div>
+                            </div>
+                            <div class="grid-column-8">
+                                <div class="playlist-title">My Playlist
+                                    <span class="heart"><i class="fa-solid fa-heart"></i></span>
+                                    <div class="playlist-title-support">30 song on the list 
+                                        <span><i class="fa-solid fa-arrow-down"></i></span>
+                                    </div>
+                                </div>
+                                <div class="playlist">
+                                    <div class="song">
+                                        <div class="song-number">01</div>
+                                        <div class="song-thumb" style="background-image: url('./asset/imgs/lisa\ the\ best.jpg')"></div>
+                                        <div class="song-info">
+                                            <div class="song-info-name">Lalisa</div>
+                                            <div class="song-info-author">Lisa (BlackPink)</div>
+                                        </div>
+                                        <div class="song-option">
+                                            <div class="song-option-suggest">
+                                                <i class="fa-solid fa-microphone"></i>
+                                                <span class="option-suggest-title">Phát cùng lời bài hát</span>
+                                            </div>
+                                            <div class="song-option-suggest">
+                                                <i class="fa-regular fa-heart"></i>
+                                                <span class="option-suggest-title">Thêm vào thư viện</span>
+                                            </div>
+                                            <div class="song-option-suggest">
+                                                <i class="fa-solid fa-ellipsis"></i>
+                                                <span class="option-suggest-title">Khác</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="radio">
+                        <div class="radio-title">Top Radio</div>
+                        <div class="radio-slider">
+                            <div class="radio-slider-main">
+                                <div class="radio-slider-main-item" onclick="handleplay(this)">
+                                    <div class="radio-slider-main-item-info">
+                                        <div class="radio-slider-main-item-avatar">
+                                            <img class="radio-slider-main-item-avatar-img" src="./asset/imgs/radio-xone.jfif" alt="">
+                                            <div class="radio-control">
+                                                <i class="pause fa-solid fa-play"></i>
+                                                <img class="playing" src="./asset/imgs/icon-playing.gif" alt="">
+                                            </div>
+                                            <audio class="radio-song" src="./asset/audios/XONEFM  TOP40  KÝ ỨC XƯA  ANH TÔI.mp3"></audio> 
+                                        </div>
+                                        <div class="radio-slider-main-item-info-stream">LIVE</div>
+                                        <div class="radio-slider-main-item-info-channel">Xone</div>
+                                    </div>
+                                    <div class="radio-slider-main-item-name">
+                                        <h2>XONE Radio</h2>
+                                        <h4>500 đang nghe</h4>
+                                    </div>
+                                </div>
+                                <div class="radio-slider-main-item" onclick="handleplay(this)">
+                                    <div class="radio-slider-main-item-info">
+                                        <div class="radio-slider-main-item-avatar">
+                                            <img class="radio-slider-main-item-avatar-img" src="./asset/imgs/radio-v-pop.jpg" alt="">
+                                            <div class="radio-control">
+                                                <i class="pause fa-solid fa-play"></i>
+                                                <img class="playing" src="./asset/imgs/icon-playing.gif" alt="">
+                                            </div>
+                                            <audio class="radio-song" src="./asset/audios/Những bài hát dành cho ĐÁM CƯỚI hay nhất.mp3"></audio> 
+                                        </div>
+                                        <div class="radio-slider-main-item-info-stream">LIVE</div>
+                                        <div class="radio-slider-main-item-info-channel">V-POP</div>
+                                    </div>
+                                    <div class="radio-slider-main-item-name">
+                                        <h2>V-POP</h2>
+                                        <h4>866 đang nghe</h4>
+                                    </div>
+                                </div>
+                                <div class="radio-slider-main-item" onclick="handleplay(this)">
+                                    <div class="radio-slider-main-item-info">
+                                        <div class="radio-slider-main-item-avatar">
+                                            <img class="radio-slider-main-item-avatar-img" src="./asset/imgs/radio-on-air.jfif" alt="">
+                                            <div class="radio-control">
+                                                <i class="pause fa-solid fa-play"></i>
+                                                <img class="playing" src="./asset/imgs/icon-playing.gif" alt="">
+                                            </div>
+                                            <audio class="radio-song" src="./asset/audios/Music Mania Air Hot.mp3"></audio> 
+                                        </div>
+                                        <div class="radio-slider-main-item-info-stream">LIVE</div>
+                                        <div class="radio-slider-main-item-info-channel">On-air</div>
+                                    </div>
+                                    <div class="radio-slider-main-item-name">
+                                        <h2>On-air</h2>
+                                        <h4>600 đang nghe</h4>
+                                    </div>
+                                </div>
+                                <div class="radio-slider-main-item" onclick="handleplay(this)">
+                                    <div class="radio-slider-main-item-info">
+                                        <div class="radio-slider-main-item-avatar">
+                                            <img class="radio-slider-main-item-avatar-img" src="./asset/imgs/radio-bolero.jpg" alt="">
+                                            <div class="radio-control">
+                                                <i class="pause fa-solid fa-play"></i>
+                                                <img class="playing" src="./asset/imgs/icon-playing.gif" alt="">
+                                            </div>
+                                            <audio class="radio-song" src="./asset/audios/Quang Lê  Lệ Quyên Bolero  Liên Khúc Nhạc Trữ Tình Song Ca Hay Nhất.mp3"></audio> 
+                                        </div>
+                                        <div class="radio-slider-main-item-info-stream">LIVE</div>
+                                        <div class="radio-slider-main-item-info-channel">Bolero</div>
+                                    </div>
+                                    <div class="radio-slider-main-item-name">
+                                        <h2>Bolero</h2>
+                                        <h4>300 đang nghe</h4>
+                                    </div>
+                                </div>
+                                <div class="radio-slider-main-item" onclick="handleplay(this)">
+                                    <div class="radio-slider-main-item-info">
+                                        <div class="radio-slider-main-item-avatar">
+                                            <img class="radio-slider-main-item-avatar-img" src="./asset/imgs/radio-us-uk.jfif" alt="">
+                                            <div class="radio-control">
+                                                <i class="pause fa-solid fa-play"></i>
+                                                <img class="playing" src="./asset/imgs/icon-playing.gif" alt="">
+                                            </div>
+                                            <audio class="radio-song" src="./asset/audios/TOP 12 Bản Nhạc USUK Tâm Trạng Hay Nhất  Chill Music.mp3"></audio> 
+                                        </div>
+                                        <div class="radio-slider-main-item-info-stream">LIVE</div>
+                                        <div class="radio-slider-main-item-info-channel">us-uk</div>
+                                    </div>
+                                    <div class="radio-slider-main-item-name">
+                                        <h2>us-uk</h2>
+                                        <h4>800 đang nghe</h4>
+                                    </div>
+                                </div>
+                                <div class="radio-slider-main-item" onclick="handleplay(this)">
+                                    <div class="radio-slider-main-item-info">
+                                        <div class="radio-slider-main-item-avatar">
+                                            <img class="radio-slider-main-item-avatar-img" src="./asset/imgs/radio-k-pop.jfif" alt="">
+                                            <div class="radio-control">
+                                                <i class="pause fa-solid fa-play"></i>
+                                                <img class="playing" src="./asset/imgs/icon-playing.gif" alt="">
+                                            </div>
+                                            <audio class="radio-song" src="./asset/audios/HOW YOU LIKE THAT  BLACKPINK  TỔNG HỢP CÁC CA KHÚC CỦA BLACKPINK.mp3"></audio> 
+                                        </div>
+                                        <div class="radio-slider-main-item-info-stream">LIVE</div>
+                                        <div class="radio-slider-main-item-info-channel">K-pop</div>
+                                    </div>
+                                    <div class="radio-slider-main-item-name">
+                                        <h2>K-pop</h2>
+                                        <h4>900 đang nghe</h4>
+                                    </div>
+                                </div>
+                                <div class="radio-slider-main-item" onclick="handleplay(this)">
+                                    <div class="radio-slider-main-item-info">
+                                        <div class="radio-slider-main-item-avatar">
+                                            <img class="radio-slider-main-item-avatar-img" src="./asset/imgs/radio-c-pop.jfif" alt="">
+                                            <div class="radio-control">
+                                                <i class="pause fa-solid fa-play"></i>
+                                                <img class="playing" src="./asset/imgs/icon-playing.gif" alt="">
+                                            </div>
+                                            <audio class="radio-song" src="./asset/audios/Playlist Nhạc Trung Hay Tháng 22022  Ảo Ảnh 海市蜃楼  Hứa Lam Tâm.mp3.webm"></audio> 
+                                        </div>
+                                        <div class="radio-slider-main-item-info-stream">LIVE</div>
+                                        <div class="radio-slider-main-item-info-channel">C-POP</div>
+                                    </div>
+                                    <div class="radio-slider-main-item-name">
+                                        <h2>C-POP</h2>
+                                        <h4>656 đang nghe</h4>
+                                    </div>
+                                </div>
+                                <div class="radio-slider-main-item" onclick="handleplay(this)">
+                                    <div class="radio-slider-main-item-info">
+                                        <div class="radio-slider-main-item-avatar">
+                                            <img class="radio-slider-main-item-avatar-img" src="./asset/imgs/radio-j-pop.png" alt="">
+                                            <div class="radio-control">
+                                                <i class="pause fa-solid fa-play"></i>
+                                                <img class="playing" src="./asset/imgs/icon-playing.gif" alt="">
+                                            </div>
+                                            <audio class="radio-song" src="./asset/audios/TOP 10 Bài Hát Tiếng Nhật Cực Hay  M30  Nhạc Phim Nhật Bản Hay Nhất.mp3"></audio> 
+                                        </div>
+                                        <div class="radio-slider-main-item-info-stream">LIVE</div>
+                                        <div class="radio-slider-main-item-info-channel">J-pop</div>
+                                    </div>
+                                    <div class="radio-slider-main-item-name">
+                                        <h2>J-pop</h2>
+                                        <h4>200 đang nghe</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart">
+                        <div class="chart-title">SongChart</div>
+                        <div class="chart-song">
+                            <div class="chart-song-hot">
+                                <div class="chart-song-hot-item">
+                                    <div class="item-number" style="color: #fe5f57">1</div>
+                                    <div class="item-thumb" onclick="playMusic(this)">
+                                        <img src="./asset/imgs/singer-đen-mười năm.jpg" alt="">
+                                        <div class="item-control">
+                                            <i class="item-pause fa-solid fa-play"></i>
+                                            <img class="item-playing" src="./asset/imgs/icon-playing.gif" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="item-info-song">Mười Năm</div>
+                                        <div class="item-info-singer">Đen</div>
+                                    </div>
+                                    <div class="item-percent">68%</div>
+                                    <audio class="hit-song" src="./asset/audios/Đen  Mười Năm ft Ngọc Linh MV Lộn Xộn 3.mp3"></audio>
+                                </div>
+                                <div class="chart-song-hot-item">
+                                    <div class="item-number" style="color: #febd2f">2</div>
+                                    <div class="item-thumb" onclick="playMusic(this)">
+                                        <img src="./asset/imgs/singer-blackpink.webp" alt="">
+                                        <div class="item-control">
+                                            <i class="item-pause fa-solid fa-play"></i>
+                                            <img class="item-playing" src="./asset/imgs/icon-playing.gif" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="item-info-song">Ddu-Du Ddu-Du</div>
+                                        <div class="item-info-singer">BlackPink</div>
+                                    </div>
+                                    <div class="item-percent">52%</div>
+                                    <audio class="hit-song" src="./asset/audios/BLACKPINK  뚜두뚜두 DDUDU DDUDU MV.mp3"></audio>
+                                </div>
+                                <div class="chart-song-hot-item">
+                                    <div class="item-number" style="color: #27c940">3</div>
+                                    <div class="item-thumb" onclick="playMusic(this)">
+                                        <img src="./asset/imgs/singer-maroon 5-memories.jpg" alt="">
+                                        <div class="item-control">
+                                            <i class="item-pause fa-solid fa-play"></i>
+                                            <img class="item-playing" src="./asset/imgs/icon-playing.gif" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="item-info-song">Memories</div>
+                                        <div class="item-info-singer">Maroon 5</div>
+                                    </div>
+                                    <div class="item-percent">36%</div>
+                                    <audio class="hit-song" src="./asset/audios/Maroon 5  Memories Lyrics.mp3"></audio>
+                                </div>
+                                <div class="song-chart-list">
+                                    <a href="#" class="song-chart-list-link">Xem Thêm</a>
+                                </div>
+                            </div>
+                            <div class="chart-song-line">
+                                <canvas class="" id="chart" width="400" height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="footer-info">Copyright © SING A SONG. All Rights Reserved | Design by <a href="">Thanhdat2012688@gmail.com</a></div>
+                    <div class="footer-note">Chịu trách nhiệm và quản lí nội dung: Nguyễn Quang Đạt</div>
+                    <img src="./asset/imgs/note-music.gif" alt="note-music" class="note-music">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./musicPlayer.js"></script>
+</body>
+</html>

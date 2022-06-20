@@ -1,0 +1,51 @@
+:root {
+    --color-red: #fe5f57;
+    --color-yellow: #febd2f;
+    --color-green: #27c940;
+    --background-color1: #feecde;
+    --background-color2:#ead9fd;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 16px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    user-select: none;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+    max-width: 100%;
+}
+
+.grid-column-2 {
+    width: 16.6667%;
+}
+
+.grid-column-10 {
+    width: 83.3333%;
+}
+
+.grid-column-4 {
+    width: 40%;
+    padding: 0 10px;
+}
+
+.grid-column-8 {
+    width: 60%;
+    padding: 0 10px;
+}
